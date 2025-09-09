@@ -217,6 +217,23 @@
                             </arguments>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>update-test-harness-submodule</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <!-- run: git submodule update \-\-init test-harness -->
+                            <executable>git</executable>
+                            <arguments>
+                                <argument>submodule</argument>
+                                <argument>update</argument>
+                                <argument>--init</argument>
+                                <argument>test-harness</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
                 </executions>
             </plugin>
             <plugin>
